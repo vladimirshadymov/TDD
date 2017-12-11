@@ -1,0 +1,68 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36787/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36787.dir/build.make CMakeFiles/cmTC_36787.dir/build
+make[1]: Entering directory '/home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36787.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_36787.dir/CheckSymbolExists.c.o   -c /home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_36787
+/home/vladimir/Workspace/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36787.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_36787.dir/CheckSymbolExists.c.o  -o cmTC_36787 
+CMakeFiles/cmTC_36787.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_36787.dir/build.make:97: recipe for target 'cmTC_36787' failed
+make[1]: *** [cmTC_36787] Error 1
+make[1]: Leaving directory '/home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_36787/fast' failed
+make: *** [cmTC_36787/fast] Error 2
+
+File /home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_88062/fast"
+/usr/bin/make -f CMakeFiles/cmTC_88062.dir/build.make CMakeFiles/cmTC_88062.dir/build
+make[1]: Entering directory '/home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp'
+make[1]: CMakeFiles/cmTC_88062.dir/build.make: No such file or directory
+make[1]: *** No rule to make target 'CMakeFiles/cmTC_88062.dir/build.make'.  Stop.
+make[1]: Leaving directory '/home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_88062/fast' failed
+make: *** [cmTC_88062/fast] Error 2
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a5cd6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a5cd6.dir/build.make CMakeFiles/cmTC_a5cd6.dir/build
+make[1]: Entering directory '/home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a5cd6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a5cd6.dir/CheckFunctionExists.c.o   -c /home/vladimir/Workspace/clion-2017.2.2/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a5cd6
+/home/vladimir/Workspace/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5cd6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a5cd6.dir/CheckFunctionExists.c.o  -o cmTC_a5cd6 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a5cd6.dir/build.make:97: recipe for target 'cmTC_a5cd6' failed
+make[1]: *** [cmTC_a5cd6] Error 1
+make[1]: Leaving directory '/home/vladimir/CLionProjects/TDD/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a5cd6/fast' failed
+make: *** [cmTC_a5cd6/fast] Error 2
+
+

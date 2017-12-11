@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/vector_tests.dir/vector_tests.cpp.o CMakeFiles/vector_tests.dir/vector3d.cpp.o  -o vector_tests /usr/lib/libgtest.a -lpthread 

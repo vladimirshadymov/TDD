@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vladimir/CLionProjects/TDD/vector3d.cpp
+vector3d.hpp
+/home/vladimir/CLionProjects/TDD/vector3d.hpp
+cmath
+-
+
+/home/vladimir/CLionProjects/TDD/vector3d.hpp
+ostream
+-
+
+/home/vladimir/CLionProjects/TDD/vector_tests.cpp
+gtest/gtest.h
+-
+cmath
+-
+sstream
+-
+iomanip
+-
+vector3d.hpp
+/home/vladimir/CLionProjects/TDD/vector3d.hpp
+
